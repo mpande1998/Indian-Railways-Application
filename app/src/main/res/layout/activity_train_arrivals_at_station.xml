@@ -1,0 +1,80 @@
+<android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@android:color/background_light"
+android:fitsSystemWindows="true"
+android:id="@+id/cLayout">
+
+<android.support.design.widget.AppBarLayout
+    android:id="@+id/main.appbar"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:expandedTitleMarginStart="50dp"
+        app:contentScrim="?attr/colorPrimary"
+        app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:id="@+id/collapsingToolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="15dp"
+            app:layout_scrollFlags="scroll|snap">
+
+            <AutoCompleteTextView
+                android:id="@+id/stationCodeInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Station Code"
+                android:layout_marginTop="45dp"
+                android:layout_alignParentTop="true"
+                android:textSize="15sp"
+                android:textColor="#E8EAF6"
+                android:textColorHint="#E8EAF6"/>
+
+            <EditText
+                android:id="@+id/windowTimeInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Window Time in Hours (either 2 or 4)"
+                android:layout_below="@+id/stationCodeInput"
+                android:textSize="15sp"
+                android:textColor="#E8EAF6"
+                android:textColorHint="#E8EAF6"/>
+        </RelativeLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:navigationIcon="@drawable/arrow_left"
+            app:layout_collapseMode="pin"/>
+    </android.support.design.widget.CollapsingToolbarLayout>
+</android.support.design.widget.AppBarLayout>
+
+<android.support.v7.widget.RecyclerView
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:id="@+id/TAASRecyclerView"
+    android:scrollbars="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+</android.support.v7.widget.RecyclerView>
+
+<android.support.design.widget.FloatingActionButton
+    android:id="@+id/fab"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    app:layout_anchor="@id/main.appbar"
+    app:layout_anchorGravity="bottom|right|end"
+    app:srcCompat="@drawable/ic_action_search" />
+</android.support.design.widget.CoordinatorLayout>

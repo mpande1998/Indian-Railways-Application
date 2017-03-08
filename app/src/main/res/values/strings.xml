@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">IndianRailways</string>
+    <string name="title_activity_check_pnr_status">checkPnrStatus</string>
+    <string name="title_activity_check_train_route">checkTrainRoute</string>
+
+    <string-array name="class_codes">
+        <item>AC First Class 1A</item>
+        <item>AC 2-Tier 2A</item>
+        <item>AC 3-Tier 3A</item>
+        <item>First Class FC</item>
+        <item>AC Chair Car CC</item>
+        <item>Sleeper SL</item>
+        <item>Second Sitting 2S</item>
+    </string-array>
+</resources>

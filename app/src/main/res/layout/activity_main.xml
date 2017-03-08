@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <Button
+        android:text="Check Train Route"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/pnrStatusSubmitButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="47dp"
+        android:layout_marginEnd="47dp"
+        android:id="@+id/trainRouteSubmitButton" />
+
+    <Button
+        android:text="Check Seat Availability"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/pnrStatusSubmitButton"
+        android:layout_alignRight="@+id/pnrStatusSubmitButton"
+        android:layout_alignEnd="@+id/pnrStatusSubmitButton"
+        android:layout_marginTop="81dp"
+        android:id="@+id/seatAvailability" />
+
+    <Button
+        android:text="Fare Enquiry"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/seatAvailability"
+        android:layout_alignLeft="@+id/trainRouteSubmitButton"
+        android:layout_alignStart="@+id/trainRouteSubmitButton"
+        android:id="@+id/fareEnquiry" />
+
+    <Button
+        android:text="Check PNR Status"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="53dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="45dp"
+        android:id="@+id/pnrStatusSubmitButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Train Arrivals at Station"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginLeft="53dp"
+        android:layout_below="@+id/seatAvailability"
+        android:id="@+id/trainArrivalsAtStation"/>
+</RelativeLayout>
